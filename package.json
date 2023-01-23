@@ -1,0 +1,15 @@
+{
+  "name": "nostr-service",
+  "version": "1.0.0",
+  "description": "NodeJS library for interfacing with Nostr",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ben Hindman",
+  "license": "MIT",
+  "dependencies": {
+    "nostr-tools": "^1.2.0",
+    "websocket-polyfill": "^0.0.3"
+  }
+}
