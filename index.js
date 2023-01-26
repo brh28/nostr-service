@@ -75,14 +75,12 @@ class NostrService {
 				  	resolve({ status: 'seen', id: event.id, url: relay.url})
 				})
 				pub.on('failed', reason => {
-				  	reject({ status: 'failed', event: event, url: relay.url, reason: reason});
+				  	reject({ status: 'failed', id: event.id, url: relay.url, reason: reason});
 				})
 			});
 		});
 
 		return Promise.any(responses)
-			.then(resp => resolve(resp))
-			.catch(AggregateErr => AggregateErr)
 	}
 }
 
